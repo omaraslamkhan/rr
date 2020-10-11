@@ -1,0 +1,79 @@
+<button
+  routerLink="add"
+  routerLinkActive="active"
+  type="button"
+  style="float: right; margin: 10px"
+  class="btn btn-primary btn-rounded btn-fw"
+>
+  Add Parent
+</button>
+
+<div class="col-lg-12 grid-margin stretch-card">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Parents</h4>
+      <mat-progress-bar
+        *ngIf="isProgress"
+        mode="indeterminate"
+      ></mat-progress-bar>
+
+      <!--<p class="card-description">-->
+      <!--Add class-->
+      <!--<code>.table</code>-->
+      <!--</p>-->
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>gender</th>
+              <th>Email</th>
+              <th>Mobile</th>
+              <th>Children</th>
+              <th>Actions</th>
+
+              <!-- <th>Status</th> -->
+            </tr>
+          </thead>
+          <tbody *ngFor="let item of this.parents">
+            <tr>
+              <td>{{ item.firstName }}</td>
+              <td>{{ item.firstName }}</td>
+              <td>{{ item.gender }}</td>
+              <td>{{ item.email }}</td>
+              <td>{{ item.mobile }}</td>
+              <td>
+                <label
+                  style="margin-left: 20px"
+                  class="badge badge-danger"
+                  (click)="openChildrenList(item)"
+                >
+                  {{ item.Student.length > 0 ? item.Student.length : 0 }}
+                </label>
+              </td>
+
+              <td>
+                <label class="badge badge-info" (click)="openDialog(item)"
+                  >edit &nbsp;&nbsp;</label
+                >
+                <label
+                  style="margin-left: 20px"
+                  class="badge badge-danger"
+                  (click)="openDeleteDialog(item)"
+                  >delete</label
+                >
+                <label
+                  style="margin-left: 20px"
+                  class="badge badge-danger"
+                  (click)="openAddChildDialog(item)"
+                  >Add Child</label
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

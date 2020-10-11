@@ -1,0 +1,131 @@
+<div class="col-12 grid-margin">
+    <div class="card">
+      <div class="card-body">
+        <!--<h2 class="card-title"><b>Teacher Registration Form</b></h2>-->
+        <form class="form-sample">
+          <p class="card-description">
+            <b>Personal info</b>
+          </p>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">First Name</label>
+                <div class="col-sm-9">
+                  <input [(ngModel)]="parent.firstName" name="firstName" type="text" class="form-control" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Last Name</label>
+                <div class="col-sm-9">
+                  <input [(ngModel)]="parent.lastName" name="lastName" type="text" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Gender</label>
+                <div class="col-sm-9">
+                  <select [(ngModel)]="parent.gender" name="gender" class="form-control">
+                    <option >Male</option>
+                    <option>Female</option>
+                  </select>
+                </div>
+  
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Date of Birth</label>
+                <div class="col-sm-9">
+                  <input [(ngModel)]="parent.dob" name="gender" class="form-control" placeholder="dd/mm/yyyy"/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Email</label>
+                <div class="col-sm-9">
+                  <input [(ngModel)]="teacher.email" name="email" class="form-control" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Password</label>
+                <div class="col-sm-9">
+                  <input type="password" [(ngModel)]="teacher.password" name="password" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="row">
+            <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">User Name</label>
+                  <div class="col-sm-9">
+                    <input [(ngModel)]="parent.username" name="username" class="form-control"/>
+                  </div>
+                </div>
+              </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Address</label>
+                <div class="col-sm-9">
+                  <input [(ngModel)]="parent.address" name="address" class="form-control" />
+                </div>
+              </div>
+            </div>
+                      
+          </div>
+  
+
+          <div class="row">
+            <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Mobile</label>
+                  <div class="col-sm-9">
+                    <input [(ngModel)]="parent.mobile" name="mobile"type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control"/>
+                  </div>
+                </div>
+              </div>
+                       
+          </div>
+  
+       
+          <p class="card-description">
+            <b>Education Details</b>
+          </p>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Qualification</label>
+                <div class="col-sm-9">
+                    <select [(ngModel)]="parent.qualification" class="form-control dropdown" name="qualification">
+                      <option value="" selected="selected" disabled="disabled">-- select one --</option>
+                      <option value="Secondary education">Secondary education or high school</option>
+                      <option value="Bachelor's degree">Bachelor's degree</option>
+                      <option value="Master's degree">Master's degree</option>
+                      <option value="Doctorate or higher">Doctorate or higher</option>
+                    </select>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+       
+         
+
+        </form>
+        <button routerLink="/parents" (click)="updateParent()" routerLinkActive="active" type="button" style="float: left;margin: 10px" class="btn btn-primary btn-rounded btn-fw">Save</button>
+      </div>
+    </div>
+  </div>
+  
